@@ -1,0 +1,16 @@
+ .total-summary span {
+     font-weight: 600;
+ }
+
+ .total-order-name {
+     color: #b12704;
+     font-size: 17px;
+     font-weight: 700;
+     line-height: 22px;
+ }
+
+ .review-btn {
+     justify-content: center;
+     align-items: center;
+     display: flex;
+ }

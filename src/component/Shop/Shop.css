@@ -1,0 +1,40 @@
+.shop-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.card-container {}
+
+.product-container {
+    border-right: 1px solid lightgray;
+    margin-right: 5px;
+    margin-left: 50px;
+}
+
+.order-summary {
+    text-align: center;
+}
+
+.order-summary p {
+    font-size: 20px
+}
+
+.search-container {
+    background-color: rgba(0, 0, 0, 0.637);
+    text-align: center;
+    line-height: 40px
+}
+
+.search-container input {
+    width: 75%;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.search-container input:focus {
+    border: none;
+    color: #000000;
+    background-color: rgb(247, 214, 28);
+    font-weight: 600;
+}
