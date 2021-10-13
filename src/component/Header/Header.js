@@ -1,14 +1,26 @@
 import React from 'react';
 import './Header.css';
 import logo from '../../images/logo.png'
+import { NavLink } from 'react-router-dom';
 const Header = () => {
+
     return (
         <div className="header">
             <img className="logo" src={logo} alt="" />
             <nav>
-                <a href="/shop">Shop</a>
-                <a href="/orders">Order Reivew</a>
-                <a href="/inventory">Manage Inventory</a>
+                <NavLink activeStyle={{
+                    fontWeight: "bold",
+                    color: "goldenrod"
+                }} to="/shop">Shop</NavLink>
+                <NavLink activeStyle={{
+                    fontWeight: "bold",
+                    color: "goldenrod",
+
+                }} to="/orders">Order Reivew</NavLink>
+                <NavLink activeStyle={{
+                    fontWeight: "bold",
+                    color: "goldenrod"
+                }} to="/inventory">Manage Inventory</NavLink>
             </nav>
         </div>
     );

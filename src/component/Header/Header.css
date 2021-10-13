@@ -23,3 +23,9 @@
 .logo {
     height: 50px;
 }
+
+.active-color {
+    color: white;
+    background-color: goldenrod;
+    border-bottom: 2px solid rgb(194, 167, 15);
+}

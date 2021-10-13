@@ -24,7 +24,7 @@ const Shop = () => {
             const saveCard = getStoreCart();
             const storeCard = []
             for (const key in saveCard) {
-                console.log(key, saveCard[key])
+
                 const addedProduct = products.find(pd => pd.key === key);
                 // Product quantity add
 
@@ -59,18 +59,22 @@ const Shop = () => {
     return (
         <div>
             <div className="search-container">
-                <input
-                    type="text"
-                    placeholder="Search Product"
-                    onChange={handleSearchField}
-                />
+
+                <div class="input-group mb-3 p-3 container">
+                    <input type="text" class="form-control" onChange={handleSearchField} placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+
+                </div>
             </div>
 
             <div className="shop-container">
                 <div className="product-container">
 
                     {
-                        displayProducts.map(product => <Product
+                        displayProducts.length === 0 ? <div className="text-center">
+                            <div class="spinner-grow" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div> : displayProducts.map(product => <Product
                             key={product.key}
                             product={product}
                             handleAddToCard={handleAddToCard}
