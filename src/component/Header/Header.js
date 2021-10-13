@@ -16,7 +16,7 @@ const Header = () => {
                     fontWeight: "bold",
                     color: "goldenrod",
 
-                }} to="/orders">Order Reivew</NavLink>
+                }} to="/review">Order Reivew</NavLink>
                 <NavLink activeStyle={{
                     fontWeight: "bold",
                     color: "goldenrod"

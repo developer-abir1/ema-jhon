@@ -10,6 +10,7 @@ import {
 import NotFound from "./NotFound/NotFound";
 import OrderReview from "./component/OrderReview/OrderReview";
 import Inventory from "./component/Inventory/Inventory";
+import PlaceOrder from "./component/PlaceOrder/PlaceOrder";
 function App() {
   return (
     <div>
@@ -17,14 +18,20 @@ function App() {
       <Router>
         <Header></Header>
         <Switch>
+          <Route exact path="/">
+            <Shop></Shop>
+          </Route>
           <Route path="/shop">
             <Shop></Shop>
           </Route>
-          <Route path="/orders">
+          <Route path="/review">
             <OrderReview></OrderReview>
           </Route>
           <Route path="/inventory">
             <Inventory></Inventory>
+          </Route>
+          <Route path="/place+order">
+            <PlaceOrder></PlaceOrder>
           </Route>
 
           <Route path="*">
