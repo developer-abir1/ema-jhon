@@ -1,0 +1,28 @@
+.login-from {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.login-from button {
+    width: 100%;
+    padding: 10px;
+}
+
+.login-from h2 {
+    margin-top: 20px;
+    color: green;
+}
+
+.login-from input {
+    text-align: center;
+    border: 1px solid gray;
+    margin: 10px;
+    border-radius: 5px;
+    width: 400px;
+}
+
+.login-from input:focus {
+    border: 1px solid #e26009 !important;
+}

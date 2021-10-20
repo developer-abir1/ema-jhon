@@ -11,7 +11,7 @@ const Shop = () => {
     const [displayProducts, setDisplayProducts] = useState([])
 
     useEffect(() => {
-        fetch('./products.JSON')
+        fetch('./products.json')
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -43,7 +43,18 @@ const Shop = () => {
 
 
     const handleAddToCard = (product) => {
-        const newCard = [...cart, product]
+        const existing = cart.find(pd => pd.key === product.key);
+        let newCard = []
+        if (existing) {
+            const rest = cart.filter(pd => pd.key !== product.key);
+            existing.quantity += 1
+            newCard = [...rest, product]
+        }
+        else {
+            product.quantity = 1;
+            newCard = [...cart, product]
+        }
+
         setCart(newCard);
         addToDb(product.key)
 
@@ -62,7 +73,7 @@ const Shop = () => {
             <div className="search-container">
 
                 <div class="input-group mb-3 p-3 container">
-                    <input type="text" class="form-control" onChange={handleSearchField} placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                    <input type="text" class="form-control" onChange={handleSearchField} placeholder="search product" aria-label="Recipient's username" aria-describedby="basic-addon2" />
 
                 </div>
             </div>
